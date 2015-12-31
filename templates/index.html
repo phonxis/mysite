@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Main Page
+{% endblock %}
+
+
+{% block content %}
+
+    {% for post in my_all_posts %}
+        <div class="post z-depth-1 hoverable">
+            <div class="post-info">
+                <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                <p align="justify">{{ post.description }}</p>
+                <p align="justify">Posted on {{ post.created|date }} by <b>{{ post.author }}</b></p>
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}

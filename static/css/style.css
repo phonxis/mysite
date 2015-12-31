@@ -1,0 +1,15 @@
+/*@font-face {
+    font-family: "Gloria Hallelujah";
+    src: url(font/gloriahallelujah.ttf);
+   }*/
+
+#header-mobile-links {
+  	top: 2em;
+  	position: relative;
+  	max-width: 370px;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+#header-mobile-links div a {
+	color : #039be5;
+}
