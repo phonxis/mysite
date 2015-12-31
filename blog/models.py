@@ -23,7 +23,7 @@ class Post(models.Model):
     published = models.BooleanField(default=True, verbose_name='Опубліковано?')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Дата створення')
     last_accessed = models.DateTimeField(verbose_name='Останній перегляд')
-    last_accessed_ip = models.IPAddressField(default='127.0.0.1', verbose_name='IP-адреса останнього відвідувача')
+    last_accessed_ip = models.GenericIPAddressField(default='127.0.0.1', verbose_name='IP-адреса останнього відвідувача')
     original_link = models.URLField(default='', verbose_name='Посилання на оригінал')
     author = models.ForeignKey(User, default=1, verbose_name='Автор')
     tags = models.ManyToManyField(Tag)

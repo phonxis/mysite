@@ -21,6 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '71ee)qjbp!ur27$k(q86^(5yun6298kh-d*#qgdq!_d)ul*!mk'
+# admin - phonxis; pass - 4602161An
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -129,10 +130,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-"""STATIC_ROOT = os.path.join(BASE_DIR, 'static')""" #for pythonanywhere
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #for pythonanywhere
 
-STATICFILES_DIRS = (
+"""STATICFILES_DIRS = (
     os.path.join(
         BASE_DIR, 'static'
         ),
     )
+"""
+

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View, ListView, DetailView
-from testblog.models import Post
+from blog.models import Post
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from markdownx.admin import MarkDownxModelAdmin
+from markdownx.admin import MarkdownxModelAdmin
 from .models import MyModel, Post, Tag
 
 # Register your models here.
