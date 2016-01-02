@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'markdownx',
     'markdown_deux',
     'blog',
+    'indexPage',
 ]
 
 MIDDLEWARE_CLASSES = [
