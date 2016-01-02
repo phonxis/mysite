@@ -10,6 +10,7 @@ from django.utils import timezone
 
 class PostsListView(ListView):
     model = Post
+    paginate_by = 10
     template_name = 'blog/index.html'
     context_object_name = 'my_all_posts'
 
