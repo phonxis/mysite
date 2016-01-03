@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Material UI One Page Theme</title>
+    <title>Main</title>
 
     <!-- CSS  -->
     <link href="{% static 'indexPage/css/plugin-min.css' %}" type="text/css" rel="stylesheet">
@@ -16,18 +16,14 @@
     <nav id="nav_f" class="default_color" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
-            <a href="#" id="logo-container" class="brand-logo">Phonxis site</a>
+            <a href="#" id="logo-container" class="brand-logo">Phonxis</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#intro">Service</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{% url 'blog:index_list' %}">Blog</a></li>
+                    <li><a href="{% url 'blog:about' %}">About</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#intro">Service</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{% url 'blog:index_list' %}">Blog</a></li>
+                    <li><a href="{% url 'blog:about' %}">About</a></li>
                 </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
@@ -43,7 +39,7 @@
             <span class="cd-words-wrapper waiting">
                 <b class="is-visible">Python</b>
                 <b>Django</b>
-                <b>self</b>
+                <b>JS</b>
             </span>
         </h1>
     </div>

@@ -6,34 +6,6 @@
     <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" media="screen" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Gloria+Hallelujah" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        nav ul a {
-            color: #000000;
-        }
-        nav {
-            box-shadow: none;
-            padding-top : .5em;
-            margin-bottom: 2em;
-        }
-        .post-info {
-            padding : 1.5em;
-            font-size : 17px;
-            font-family : 'Roboto';
-        }
-        .post {
-            margin : 1em;
-        }
-        .brand-logo {
-            font-family: "Gloria Hallelujah", cursive, serif;/*Roboto, 'Helvetica Neue', 'Helvetica', sans-serif;*/
-            margin-left: .5em;
-        }
-        .right.hide-on-med-and-down {
-            margin-right : .5em;
-        }
-        .material-icons {
-            color : #000000;
-        }
-        </style>
     <title>
         {% block title %}
         {% endblock %}
@@ -41,54 +13,42 @@
 </head>
 <body>
     <header>
-    <nav class="transparent">
-    <div class="nav-wrapper container">
-      <a href="/blog" class="brand-logo brand-logo-small black-text">Phonxisssss</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/">Overview</a></li>
-        <li><a href="#usage">Usage</a></li>
-        <li><a href="#inner-workings">Inner-Workings</a></li>
-        <li><a href="#animation">Animation</a></li>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#api">API</a></li>
-        <li><a href="#tips">Tips &amp; Examples</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-      <ul id="menu" class="side-nav" style="display: none;">
-        <li><a href="/">Overview</a></li>
-        <li><a href="#usage">Usage</a></li>
-        <li><a href="#inner-workings">Inner-Workings</a></li>
-        <li><a href="#animation">Animation</a></li>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#api">API</a></li>
-        <li><a href="#tips">Tips &amp; Examples</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-    <div class="menu-trigger hide-on-large-only" id="trigger" data-activates="mobile-demo"><i class="material-icons">menu</i></div>
-    </div>
-  </nav>
-</header>
-    <div class="container">
-{% block content %}
+        <nav class="transparent">
+            <div class="nav-wrapper container">
+                <a href="/blog" class="brand-logo brand-logo-small black-text">Phonxis</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{% url 'indexPage:index' %}">Main</a></li>
+                    <li><a href="{% url 'blog:about' %}">About</a></li>
+                </ul>
+                <ul id="menu" class="side-nav" style="display: none;">
+                    <li><a href="{% url 'indexPage:index' %}">Main</a></li>
+                    <li><a href="{% url 'blog:about' %}">About</a></li>
+                </ul>
+                <div class="menu-trigger hide-on-large-only" id="trigger" data-activates="mobile-demo"><i class="material-icons">menu</i></div>
+            </div>
+        </nav>
+    </header>
 
-{% endblock %}
- </div>
+    <div class="container">
+        {% block content %}
+
+        {% endblock %}
+    </div>
     <script src="{% static 'blog/js/jquery-2.1.1.min.js' %}"></script>
     <script src="{% static 'blog/js/materialize.js' %}"></script>
     <script src="{% static 'blog/js/panel.js' %}"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            //$('img').css('width', '200px').addClass('hoverable');
             $('p').attr('align', 'justify');
-            $('h1').css('font-family', "'Gloria Hallelujah', cursive, serif"); //font-family: 'Gloria Hallelujah', cursive, serif;
+            $('h1').css('font-family', "'Gloria Hallelujah', cursive, serif");
             $(".button-collapse").sideNav();
         });
     </script>
     <script type="text/javascript">
-    $(document).ready(function () {
-        var jPM = $.jPanelMenu();
-        jPM.on();
-    });
-</script>
+        $(document).ready(function () {
+            var jPM = $.jPanelMenu();
+            jPM.on();
+        });
+    </script>s
 </body>
 </html>

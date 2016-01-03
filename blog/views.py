@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View, ListView, DetailView
 from blog.models import Post
-from django.shortcuts import get_object_or_404
 from django.utils import timezone
 
 
@@ -27,3 +26,12 @@ class PostDetailView(DetailView):
         object.save()
         # Return the object
         return object
+
+
+class About(View):
+    def get(self, request):
+        return render(request, "blog/about.html", {})
+
+    def post(self):
+        pass
+

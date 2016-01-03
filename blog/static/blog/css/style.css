@@ -1,15 +1,51 @@
-/*@font-face {
-    font-family: "Gloria Hallelujah";
-    src: url(font/gloriahallelujah.ttf);
-   }*/
-
 #header-mobile-links {
-  	top: 2em;
-  	position: relative;
-  	max-width: 370px;
-  	margin-left: auto;
-  	margin-right: auto;
+		top: 2em;
+		position: relative;
+		max-width: 370px;
+		margin-left: auto;
+		margin-right: auto;
 }
 #header-mobile-links div a {
 	color : #039be5;
+}
+
+#trigger {
+	margin-left: 1.5em;
+}
+
+#trigger:hover {
+	cursor: pointer;
+}
+
+nav ul a {
+		color: #000000;
+}
+
+nav {
+		box-shadow: none;
+		padding-top : .5em;
+		margin-bottom: 2em;
+}
+
+.post-info {
+		padding : 1.5em;
+		font-size : 17px;
+		font-family : 'Roboto';
+}
+
+.post {
+		margin : 1em;
+}
+
+.brand-logo {
+		font-family: "Gloria Hallelujah", cursive, serif;
+		margin-left: .5em;
+}
+
+.right.hide-on-med-and-down {
+		margin-right : .5em;
+}
+
+.material-icons {
+		color : #000000;
 }

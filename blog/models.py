@@ -41,6 +41,3 @@ class Post(models.Model):
     def get_absolute_url(self):
         return "/blog/{0}/".format(self.slug)
 
-
-class MyModel(models.Model):
-    content = MarkdownxField()
